@@ -1,0 +1,23 @@
+.como-funciona {
+  background-color: #111111;
+  color: #FFFFFF;
+  padding: 80px 20px;
+  text-align: center;
+}
+
+.como-funciona .container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.como-funciona h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+.como-funciona p {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  color: #CCCCCC;
+}

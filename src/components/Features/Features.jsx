@@ -1,15 +1,19 @@
 import React from 'react';
-import "./Features.css";
+import './Features.css';
 
 export default function Features() {
   return (
-    <section className="features">
-      <h2>Como Funciona</h2>
-      <ul>
-        <li>Tecnologia de neuroestimulação auditiva</li>
-        <li>Controle via app com sessões personalizadas</li>
-        <li>Relatórios de produtividade em tempo real</li>
-      </ul>
+    <section id="features" className="features">
+      <div className="container">
+        <h2>Veja o NeusoSync em ação</h2>
+        <p>Assista ao vídeo e descubra como nosso headset pode transformar seu desempenho mental.</p>
+
+        <video autoPlay muted loop controls className="video-player">
+        <source src="/videos/videoplayback.mp4" type="video/mp4" />
+        Seu navegador não suporta vídeo.
+        </video>
+
+      </div>
     </section>
   );
 }

@@ -20,10 +20,9 @@ export default function Header() {
         <div className="header-container">
           <img src="/images/logo.png" alt="Logo" className="logo" />
           <nav className="nav-links">
-            <a href="#">LOJA</a>
-            <a href="#">DESCOBRIR</a>
-            <a href="#">SOFTWARE</a>
-            <a href="#">SUPORTE</a>
+            <a href="#como-funciona">COMO FUNCIONA</a>
+            <a href="#software">SOFTWARE</a>
+            <a href="#contato">SUPORTE</a> 
           </nav>
           <div className="header-actions">
             <div className="search-box">

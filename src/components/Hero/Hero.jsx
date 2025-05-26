@@ -8,7 +8,7 @@ export default function Hero() {
         <h1>Neusosync Headset</h1>
         <p>Maximize sua concentração com a mais avançada estimulação<br></br> neural do mercado.</p>
         <div className="hero-buttons">
-          <button>VER DEMONSTRAÇÃO</button>
+          <a href="#features" className="hero-button">VER DEMONSTRAÇÃO</a>
         </div>
       </div>
     </section>
