@@ -1,0 +1,41 @@
+.hero {
+  color: #FFFFFF;
+  min-height: 76vh;
+  display: flex;
+  align-items: center;
+  justify-content: center; /* Isso permanece para centralizar o .hero-content no container */
+  text-align: left;
+}
+
+.hero h1 {
+  font-size: 2.5rem;
+  margin-bottom: 16px;
+  font-weight: 800;
+  color: #ffffff;
+  
+}
+
+.hero p {
+  font-size: 16px;
+  color: #CCCCCC;
+  margin-bottom: 40px;
+  line-height: 1.6;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.hero-content {
+  animation: fadeInUp 1s ease forwards;
+  max-width: 1200px;
+  width: 100%; /* garante que ocupe toda a largura disponível até 1200px */
+  padding: 0 40px; /* espaço lateral interno */
+}
