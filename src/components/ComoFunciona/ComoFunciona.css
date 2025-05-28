@@ -1,23 +1,43 @@
 .como-funciona {
-  background-color: #111111;
-  color: #FFFFFF;
+  background-color: #121212;
   padding: 80px 20px;
+  color: #fff;
   text-align: center;
 }
 
-.como-funciona .container {
-  max-width: 1200px;
-  margin: 0 auto;
-}
-
 .como-funciona h2 {
-  font-size: 2.5rem;
-  margin-bottom: 20px;
-  font-weight: bold;
+  font-size: 2.2rem;
+  margin-bottom: 40px;
+  color: #00B8FC;
 }
 
-.como-funciona p {
-  font-size: 1.2rem;
+.steps {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 40px;
+}
+
+.step {
+  background: #1e1e1e;
+  padding: 30px;
+  border-radius: 12px;
+  max-width: 300px;
+  transition: transform 0.3s ease;
+}
+
+.step:hover {
+  transform: translateY(-5px);
+}
+
+.step h3 {
+  font-size: 1.3rem;
+  color: #00B8FC;
+  margin-bottom: 15px;
+}
+
+.step p {
+  font-size: 0.95rem;
   line-height: 1.6;
-  color: #CCCCCC;
+  color: #ccc;
 }

@@ -23,18 +23,13 @@
   padding: 0 30px;
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  flex-wrap: wrap;
-}
-
-/* Principal */
-.header-main {
-  background-color: transparent;
-  padding: 15px 0;
+  position: relative; /* Adicionado para referenciar o posicionamento absoluto */
+  height: 80px; /* Altura fixa para facilitar o posicionamento vertical */
 }
 
 .logo {
   height: 50px;
+  z-index: 1; /* Garante que fique acima, se necessário */
 }
 
 @media (max-width: 768px) {
@@ -44,6 +39,9 @@
 }
 
 .nav-links {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
   display: flex;
   gap: 35px;
 }
@@ -57,45 +55,5 @@
 }
 
 .nav-links a:hover {
-  color: #00B8FC;
-}
-
-.header-actions {
-  display: flex;
-  align-items: center;
-  gap: 20px;
-}
-
-.search-box {
-  background-color: #2a2a2a;
-  padding: 6px 14px;
-  border-radius: 30px;
-  display: flex;
-  align-items: center;
-  transition: background-color 0.3s;
-}
-
-.search-box:hover {
-  background-color: #3a3a3a;
-}
-
-.search-box input {
-  border: none;
-  background: transparent;
-  color: white;
-  outline: none;
-  padding-right: 8px;
-  font-size: 0.9rem;
-  width: 120px;
-}
-
-.icon {
-  cursor: pointer;
-  font-size: 1.2rem;
-  color: white;
-  transition: color 0.3s;
-}
-
-.icon:hover {
   color: #00B8FC;
 }
