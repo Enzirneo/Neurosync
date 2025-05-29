@@ -4,20 +4,19 @@ import './ComoFunciona.css';
 export default function ComoFunciona() {
   return (
     <section id="como-funciona" className="como-funciona">
-      <div className="container">
-        <h2>Como Funciona</h2>
-        <div className="steps">
-          <div className="step">
-            <h3>1. Conecte</h3>
-            <p>Coloque o NeusoSync e conecte via Bluetooth ao aplicativo no seu smartphone.</p>
+      <div className="como-funciona-container">
+        <div className="como-funciona-content">
+          <div className="como-funciona-image">
+            <img src="/images/jogador.png" alt="Ilustração do NeusoSync" />
           </div>
-          <div className="step">
-            <h3>2. Escolha a Sessão</h3>
-            <p>Selecione o tipo de estimulação neural desejada: foco, memória, relaxamento e mais.</p>
-          </div>
-          <div className="step">
-            <h3>3. Aproveite</h3>
-            <p>Inicie a sessão e sinta os benefícios da neuroestimulação portátil em minutos.</p>
+          <div className="como-funciona-text">
+            <h2>Como Funciona</h2>
+            <p>
+              O NeusoSync utiliza impulsos neurais seguros para melhorar seu foco, memória e produtividade.
+              Após vestir o headset, conecte-o facilmente ao aplicativo via Bluetooth.
+              Em segundos, você poderá escolher sessões personalizadas que se adaptam à sua rotina e objetivos.
+              Toda a tecnologia de neuroestimulação portátil na palma da sua mão.
+            </p>
           </div>
         </div>
       </div>
