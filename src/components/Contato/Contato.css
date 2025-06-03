@@ -1,41 +1,113 @@
 .contato {
-  background-color: #0d0d0d;
-  padding: 80px 20px;
+  background: linear-gradient(180deg, #1C1C1C 0%, #111 100%);
+  padding: 100px 20px;
   text-align: center;
   color: #fff;
 }
 
+.contato .container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 60px 30px;
+  border-radius: 20px;
+  background-color: #1a1a1a;
+  box-shadow:
+    8px 8px 20px rgba(0, 0, 0, 0.6),     /* sombra externa (baixo + direita) */
+    -8px -8px 20px rgba(40, 40, 40, 0.4), /* brilho superior/esquerdo */
+    inset 4px 4px 12px rgba(0, 0, 0, 0.6),     /* sombra interna */
+    inset -4px -4px 12px rgba(40, 40, 40, 0.4); /* brilho interno */
+  backdrop-filter: blur(2px);
+  transition: all 0.3s ease;
+}
+
 .contato h2 {
-  font-size: 2.2rem;
+  font-size: 2.8rem;
   color: #00B8FC;
-  margin-bottom: 20px;
+  margin-bottom: 16px;
+  position: relative;
+  display: inline-block;
+}
+
+.contato h2::after {
+  content: '';
+  display: block;
+  width: 60%;
+  height: 3px;
+  background-color: #00B8FC;
+  margin: 12px auto 0;
+  border-radius: 2px;
 }
 
 .contato p {
-  max-width: 600px;
-  margin: 0 auto 40px;
+  font-size: 1.1rem;
+  line-height: 1.6;
   color: #ccc;
-  font-size: 1rem;
+  margin-bottom: 48px;
+  max-width: 650px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .contato-links {
   display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
   justify-content: center;
+  flex-wrap: wrap;
+  gap: 30px;
 }
 
-.contato-btn {
-  padding: 14px 24px;
+.contato-icone {
+  position: relative;
   background-color: #1a1a1a;
   color: #fff;
-  border-radius: 8px;
+  border-radius: 50%;
+  padding: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   text-decoration: none;
-  font-weight: 600;
-  transition: background-color 0.3s ease;
+  transition: background-color 0.3s, transform 0.3s;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
 }
 
-.contato-btn:hover {
+.contato-icone:hover {
   background-color: #00B8FC;
-  color: #1a1a1a;
+  color: #0d0d0d;
+  transform: translateY(-5px);
+}
+
+/* Tooltip */
+.contato-icone::after {
+  content: attr(data-tooltip);
+  position: absolute;
+  bottom: -36px;
+  background-color: #00B8FC;
+  color: #0d0d0d;
+  padding: 6px 12px;
+  border-radius: 6px;
+  font-size: 0.85rem;
+  white-space: nowrap;
+  opacity: 0;
+  transform: translateY(10px);
+  transition: all 0.3s ease;
+  pointer-events: none;
+}
+
+.contato-icone:hover::after {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Responsividade */
+@media (max-width: 600px) {
+  .contato h2 {
+    font-size: 2rem;
+  }
+
+  .contato p {
+    font-size: 1rem;
+  }
+
+  .contato-links {
+    gap: 20px;
+  }
 }

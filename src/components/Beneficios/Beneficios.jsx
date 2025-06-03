@@ -1,27 +1,26 @@
 import React, { useState } from "react";
 import "./Beneficios.css";
-import { ChevronLeft, ChevronRight } from "lucide-react"; // Ícones Lucide
 
 const beneficiosData = [
   {
     titulo: "Melhoria Cognitiva",
     descricao: "Aumente sua capacidade de foco, memória e aprendizado de forma natural.",
-    imagem: "/images/fone.png",
+    imagem: "/images/melhoriacognitiva.png",
   },
   {
     titulo: "Sessões Rápidas",
     descricao: "Resultados em minutos com sessões de curta duração e máxima eficiência.",
-    imagem: "/images/fone.png",
+    imagem: "/images/sessoesrapidas.png",
   },
   {
     titulo: "Controle via App",
     descricao: "Configure tudo no aplicativo: tipos de sessão, intensidade e duração.",
-    imagem: "/images/fone.png",
+    imagem: "/images/controleapp.png",
   },
   {
     titulo: "Portabilidade",
     descricao: "Use onde quiser. Ideal para casa, trabalho ou viagens.",
-    imagem: "/images/fone.png",
+    imagem: "/images/portabilidade.png",
   },
 ];
 
@@ -45,7 +44,7 @@ export default function Beneficios() {
   };
 
   return (
-    <section className="beneficios">
+    <section id="beneficios" className="beneficios">
       <div className="container">
         <h2>Benefícios do NeusoSync</h2>
         <p className="intro">
@@ -70,23 +69,23 @@ export default function Beneficios() {
               ))}
             </div>
 
-            {/* Controles atualizados com Lucide */}
             <button
-              className="carousel-control-prev"
+              className="carousel-control carousel-prev"
               type="button"
               onClick={prev}
               aria-label="Anterior"
             >
-              <ChevronLeft size={24} color="white" />
+              ‹
             </button>
             <button
-              className="carousel-control-next"
+              className="carousel-control carousel-next"
               type="button"
               onClick={next}
               aria-label="Próximo"
             >
-              <ChevronRight size={24} color="white" />
+              ›
             </button>
+
           </div>
 
           <div className="carousel-indicators">

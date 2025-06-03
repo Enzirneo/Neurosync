@@ -19,6 +19,12 @@ body {
   position: relative;
   height: 850px;
 }
+@media (max-width: 768px) {
+  .background-wrapper {
+    height: 600px;
+    background-position: 80% center;
+  }
+}
 
 section {
   padding: 60px 20px;

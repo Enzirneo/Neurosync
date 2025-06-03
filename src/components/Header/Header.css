@@ -1,4 +1,3 @@
-/* Estilo base */
 .header {
   position: fixed;
   top: 0;
@@ -10,40 +9,43 @@
   transition: background-color 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* Estilo quando rola a página */
 .header.scrolled {
   background-color: rgba(28, 28, 28, 0.95);
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
 }
 
-/* Container com limite */
 .header-container {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 30px;
   display: flex;
   align-items: center;
-  position: relative; /* Adicionado para referenciar o posicionamento absoluto */
-  height: 80px; /* Altura fixa para facilitar o posicionamento vertical */
+  justify-content: space-between;
+  height: 80px;
+  position: relative;
 }
 
 .logo {
   height: 50px;
-  z-index: 1; /* Garante que fique acima, se necessário */
+  z-index: 2;
 }
 
-@media (max-width: 768px) {
-  .logo {
-    height: 36px;
-  }
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 2rem;
+  color: white;
+  cursor: pointer;
+  z-index: 2;
 }
 
 .nav-links {
+  display: flex;
+  gap: 35px;
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
-  display: flex;
-  gap: 35px;
 }
 
 .nav-links a {
@@ -56,4 +58,37 @@
 
 .nav-links a:hover {
   color: #00B8FC;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    gap: 20px;
+    position: absolute;
+    top: 80px;
+    left: 0;
+    width: 100%;
+    background-color: #1c1c1c;
+    padding: 20px 0;
+    transform: translateY(-150%);
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.3s ease;
+    text-align: center;
+  }
+
+  .nav-links.open {
+    transform: translateY(0);
+    opacity: 1;
+    pointer-events: all;
+  }
+
+  .logo {
+    height: 36px;
+  }
 }

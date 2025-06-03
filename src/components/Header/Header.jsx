@@ -3,6 +3,7 @@ import "./Header.css";
 
 export default function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
+  const [menuOpen, setMenuOpen] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -13,14 +14,22 @@ export default function Header() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  const toggleMenu = () => setMenuOpen(!menuOpen);
+
   return (
     <header className={`header ${isScrolled ? "scrolled" : ""}`}>
       <div className="header-container">
         <img src="/images/logo.png" alt="Logo" className="logo" />
-        <nav className="nav-links">
-          <a href="#como-funciona">COMO FUNCIONA</a>
-          <a href="#software">SOFTWARE</a>
-          <a href="#contato">SUPORTE</a> 
+
+        <button className="menu-toggle" onClick={toggleMenu}>
+          ☰
+        </button>
+
+        <nav className={`nav-links ${menuOpen ? "open" : ""}`}>
+          <a href="#como-funciona" onClick={() => setMenuOpen(false)}>COMO FUNCIONA</a>
+          <a href="#software" onClick={() => setMenuOpen(false)}>SOFTWARE</a>
+          <a href="#beneficios" onClick={() => setMenuOpen(false)}>BENEFÍCIOS</a>
+          <a href="#contato" onClick={() => setMenuOpen(false)}>SUPORTE</a>
         </nav>
       </div>
     </header>

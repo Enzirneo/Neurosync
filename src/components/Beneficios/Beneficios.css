@@ -4,7 +4,7 @@
 }
 
 .beneficios .container {
-  max-width: 600px;
+  max-width: 1100px;
   margin: 0 auto; /* centraliza horizontalmente */
   text-align: center; /* centraliza texto */
   padding: 0 15px;
@@ -33,7 +33,8 @@
   overflow: visible; /* para as setas aparecerem */
   border-radius: 16px;
   box-shadow: 0 12px 28px rgba(0, 0, 0, 0.1);
-  max-width: 600px;
+  max-width: 900px;
+  width: 100%;
   margin: 0 auto 30px auto;
   background: white;
 }
@@ -47,7 +48,11 @@
   transition: opacity 0.6s ease-in-out;
   z-index: 0;
   text-align: center;
-  padding-bottom: 20px; /* espaço para legenda */
+  padding-bottom: 0;
+  min-height: 600px; /* Altura mínima padronizada */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .carousel-item.active {
@@ -57,23 +62,29 @@
 }
 
 
+
 .carousel-item img {
   width: 100%;
-  height: 320px;
+  height: 420px;
   object-fit: cover;
   border-top-left-radius: 16px;
   border-top-right-radius: 16px;
 }
 
-/* Legenda */
+
 .carousel-caption {
-  padding: 20px 30px 30px;
+  padding: 20px 30px;
   background: white;
   border-bottom-left-radius: 16px;
   border-bottom-right-radius: 16px;
   color: #333;
   text-align: center;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
+
 
 .carousel-caption h3 {
   margin: 0 0 10px;
@@ -112,64 +123,51 @@
   opacity: 1;
 }
 
-/* Botões de controle (setas) */
-.carousel-control-prev,
-.carousel-control-next {
+.carousel-control {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  background-color: rgba(17, 17, 17, 0.6);
-  border-radius: 50%;
-  width: 40px;
-  height: 40px;
+  background-color: #333;
+  color: #fff;
+  font-size: 1.5rem;
+  font-weight: bold;
   border: none;
+  border-radius: 8px; /* borda levemente arredondada */
+  width: 44px;
+  height: 44px;
   cursor: pointer;
-  z-index: 20;
-  display: flex; /* padrão visível */
+  z-index: 10;
+  display: flex;
   align-items: center;
   justify-content: center;
-  transition: background-color 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  transition: all 0.3s ease;
 }
 
-.carousel-control-prev:hover,
-.carousel-control-next:hover {
-  background-color: rgba(17, 17, 17, 0.9);
+.carousel-control:hover {
+  background-color: #111;
+  transform: translateY(-50%) scale(1.05);
 }
 
-.carousel-control-prev {
-  left: 10px; /* dentro do container */
-}
-
-.carousel-control-next {
-  right: 10px;
-}
-
-.carousel-control-prev-icon,
-.carousel-control-next-icon {
-  display: inline-block;
-  width: 16px;
-  height: 16px;
-  background-size: 100% 100%;
-  background-repeat: no-repeat;
-  background-position: center;
-}
-
-.carousel-control-prev-icon {
-  background-image: url("data:image/svg+xml;charset=utf8,<svg fill='white' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'><path d='M5.5 0L4.5 1 7 3.5 0 3.5 0 4.5 7 4.5 4.5 7 5.5 8 9 4.5 5.5 0z'/></svg>");
-  transform: rotate(180deg);
-}
-
-.carousel-control-next-icon {
-  background-image: url("data:image/svg+xml;charset=utf8,<svg fill='white' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'><path d='M2.5 0L3.5 1 1 3.5 8 3.5 8 4.5 1 4.5 3.5 7 2.5 8-1 4.5 2.5 0z'/></svg>");
-}
-
-.carousel-control-prev{
+.carousel-prev {
   left: -50px;
 }
 
-.carousel-control-next {
+.carousel-next {
   right: -50px;
 }
+
+@media (max-width: 768px) {
+  .carousel-prev {
+    left: 10px;
+  }
+
+  .carousel-next {
+    right: 10px;
+  }
+}
+
+
 
 /* Mostrar setas até 1200px */
 @media (max-width: 1200px) {
