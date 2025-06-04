@@ -24,7 +24,7 @@
 .como-funciona-image img {
   width: 100%;
   border-radius: 12px;
-  max-width: none; /* remove limitação de tamanho */
+  max-width: none;
   height: auto;
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
 }

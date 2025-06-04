@@ -12,10 +12,10 @@
   border-radius: 20px;
   background-color: #1a1a1a;
   box-shadow:
-    8px 8px 20px rgba(0, 0, 0, 0.6),     /* sombra externa (baixo + direita) */
-    -8px -8px 20px rgba(40, 40, 40, 0.4), /* brilho superior/esquerdo */
-    inset 4px 4px 12px rgba(0, 0, 0, 0.6),     /* sombra interna */
-    inset -4px -4px 12px rgba(40, 40, 40, 0.4); /* brilho interno */
+    8px 8px 20px rgba(0, 0, 0, 0.6),
+    -8px -8px 20px rgba(40, 40, 40, 0.4),
+    inset 4px 4px 12px rgba(0, 0, 0, 0.6),
+    inset -4px -4px 12px rgba(40, 40, 40, 0.4);
   backdrop-filter: blur(2px);
   transition: all 0.3s ease;
 }
@@ -75,7 +75,6 @@
   transform: translateY(-5px);
 }
 
-/* Tooltip */
 .contato-icone::after {
   content: attr(data-tooltip);
   position: absolute;
@@ -97,7 +96,6 @@
   transform: translateY(0);
 }
 
-/* Responsividade */
 @media (max-width: 600px) {
   .contato h2 {
     font-size: 2rem;

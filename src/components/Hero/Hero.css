@@ -58,7 +58,6 @@
   }
 }
 
-/* Responsividade */
 @media (max-width: 768px) {
   .hero {
     min-height: 60vh;

@@ -60,7 +60,6 @@
   color: #00B8FC;
 }
 
-/* Responsividade */
 @media (max-width: 768px) {
   .menu-toggle {
     display: block;

@@ -25,7 +25,7 @@
 
 .video-player {
   width: 100%;
-  max-width: 1200px; /* ou 1200px se quiser ocupar mais */
+  max-width: 1200px;
   height: auto;
   border-radius: 12px;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
