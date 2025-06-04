@@ -1,14 +1,14 @@
-import React from 'react';
+import React, { Suspense, lazy } from 'react';
 import './styles/global.css';
 
-import Header from './components/Header/Header';
-import Hero from './components/Hero/Hero';
-import Features from './components/Features/Features';
-import ComoFunciona from './components/ComoFunciona/ComoFunciona';
-import Software from './components/Software/Software';
-import Beneficios from './components/Beneficios/Beneficios';
-import Contato from './components/Contato/Contato';
-import Footer from './components/Footer/Footer';
+const Header = lazy(() => import('./components/Header/Header'));
+const Hero = lazy(() => import('./components/Hero/Hero'));
+const Features = lazy(() => import('./components/Features/Features'));
+const ComoFunciona = lazy(() => import('./components/ComoFunciona/ComoFunciona'));
+const Software = lazy(() => import('./components/Software/Software'));
+const Beneficios = lazy(() => import('./components/Beneficios/Beneficios'));
+const Contato = lazy(() => import('./components/Contato/Contato'));
+const Footer = lazy(() => import('./components/Footer/Footer'));
 
 function App() {
   return (

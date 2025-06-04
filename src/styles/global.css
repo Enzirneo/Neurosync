@@ -19,10 +19,28 @@ body {
   position: relative;
   height: 850px;
 }
+
+.background-wrapper::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0);
+  z-index: 1;
+  transition: background 0.3s ease;
+}
+
+.background-wrapper > * {
+  position: relative;
+  z-index: 2;
+}
 @media (max-width: 768px) {
   .background-wrapper {
-    height: 600px;
+    height: 400px;
     background-position: 80% center;
+  }
+
+  .background-wrapper::before {
+    background: rgba(0, 0, 0, 0.5);
   }
 }
 
